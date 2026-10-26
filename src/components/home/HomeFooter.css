@@ -1,0 +1,88 @@
+.home-footer {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+}
+
+.home-footer__tagline {
+  position: absolute;
+  left: 50%;
+  top: 65.56%;
+  width: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  text-align: center;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 3.33cqw;
+  line-height: 118%;
+  color: var(--color-ink);
+}
+
+.home-footer__sparkle {
+  position: absolute;
+  width: 7.59%;
+  height: auto;
+}
+
+.home-footer__sparkle--left {
+  left: 15.56%;
+  top: 65.12%;
+}
+
+.home-footer__sparkle--right {
+  left: 77.78%;
+  top: 65.12%;
+}
+
+.home-footer__sparkle--bottom {
+  left: 88%;
+  top: 77%;
+  width: 5%;
+}
+
+.home-footer__heart {
+  position: absolute;
+  width: 5.6%;
+  height: 2.8%;
+}
+
+.home-footer__heart--left {
+  left: 6%;
+  top: 76.5%;
+}
+
+.home-footer__heart-base {
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-size: 655.34% 100%;
+  background-position: left top;
+}
+
+.home-footer__heart-shine {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    115deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.9) 50%,
+    transparent 65%
+  );
+  background-repeat: no-repeat;
+  background-size: 320% 320%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 655.34% 100%;
+  mask-size: 655.34% 100%;
+  -webkit-mask-position: left top;
+  mask-position: left top;
+  pointer-events: none;
+}
+
+.home-footer__cta {
+  left: 29.63%;
+  top: 73.46%;
+  width: 38.89%;
+  height: 8.02%;
+}

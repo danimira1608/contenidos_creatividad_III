@@ -1,0 +1,35 @@
+.section-panel {
+  position: absolute;
+}
+
+.section-panel__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  pointer-events: none;
+}
+
+.section-panel__title {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 2.41cqw;
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+
+.section-panel__content {
+  position: absolute;
+  left: 3%;
+  right: 3%;
+  top: 40%;
+  bottom: 17%;
+  display: flex;
+  align-items: flex-start;
+}

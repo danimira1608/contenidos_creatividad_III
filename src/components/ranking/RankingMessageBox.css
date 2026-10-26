@@ -1,0 +1,109 @@
+.ranking-message {
+  --step: 0.7cqw;
+  width: 92%;
+  box-sizing: border-box;
+  padding: 0.37cqw;
+  background: var(--color-rose);
+  clip-path: polygon(
+    0 calc(var(--step) * 2),
+    var(--step) calc(var(--step) * 2),
+    var(--step) var(--step),
+    calc(var(--step) * 2) var(--step),
+    calc(var(--step) * 2) 0,
+    calc(100% - var(--step) * 2) 0,
+    calc(100% - var(--step)) 0,
+    calc(100% - var(--step)) var(--step),
+    100% var(--step),
+    100% calc(var(--step) * 2),
+    100% calc(100% - var(--step) * 2),
+    calc(100% - var(--step)) calc(100% - var(--step) * 2),
+    calc(100% - var(--step)) calc(100% - var(--step)),
+    calc(100% - var(--step) * 2) calc(100% - var(--step)),
+    calc(100% - var(--step) * 2) 100%,
+    calc(var(--step) * 2) 100%,
+    var(--step) 100%,
+    var(--step) calc(100% - var(--step)),
+    0 calc(100% - var(--step)),
+    0 calc(100% - var(--step) * 2)
+  );
+}
+
+.ranking-message__inner {
+  --step: 0.56cqw;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2.04cqw 1.2cqw;
+  display: flex;
+  align-items: stretch;
+  gap: 1cqw;
+  background: #fbeceb;
+  clip-path: polygon(
+    0 calc(var(--step) * 2),
+    var(--step) calc(var(--step) * 2),
+    var(--step) var(--step),
+    calc(var(--step) * 2) var(--step),
+    calc(var(--step) * 2) 0,
+    calc(100% - var(--step) * 2) 0,
+    calc(100% - var(--step)) 0,
+    calc(100% - var(--step)) var(--step),
+    100% var(--step),
+    100% calc(var(--step) * 2),
+    100% calc(100% - var(--step) * 2),
+    calc(100% - var(--step)) calc(100% - var(--step) * 2),
+    calc(100% - var(--step)) calc(100% - var(--step)),
+    calc(100% - var(--step) * 2) calc(100% - var(--step)),
+    calc(100% - var(--step) * 2) 100%,
+    calc(var(--step) * 2) 100%,
+    var(--step) 100%,
+    var(--step) calc(100% - var(--step)),
+    0 calc(100% - var(--step)),
+    0 calc(100% - var(--step) * 2)
+  );
+}
+
+.ranking-message__side {
+  position: relative;
+  flex: 0 0 7cqw;
+  min-height: 6cqw;
+}
+
+.ranking-message__content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8cqw;
+}
+
+.ranking-message__deco {
+  position: absolute;
+  height: auto;
+  pointer-events: none;
+}
+
+.ranking-message__title {
+  margin: 0;
+  text-align: center;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 4.2cqw;
+  line-height: 1.1;
+  color: var(--color-rose);
+}
+
+.ranking-message__text {
+  margin: 0;
+  text-align: center;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 2.8cqw;
+  line-height: 1.4;
+  color: var(--color-ink);
+}
+
+.ranking-message__highlight {
+  color: var(--color-rose);
+  font-weight: 700;
+}

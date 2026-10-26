@@ -1,0 +1,32 @@
+.falling-items {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.falling-items__item {
+  position: absolute;
+  width: 9%;
+  height: 6%;
+  transform: translate(-50%, -50%);
+}
+
+.falling-items__trail {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  width: 55%;
+  height: 140%;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5));
+  filter: blur(4px);
+}
+
+.falling-items__sprite {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 0.06cqw #fff) drop-shadow(0 0 0.06cqw #fff) drop-shadow(0 4px 4px rgba(20, 13, 15, 0.35));
+}

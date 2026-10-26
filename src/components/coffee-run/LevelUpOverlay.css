@@ -1,0 +1,151 @@
+.level-up {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.85cqw;
+  background: rgba(20, 13, 15, 0.6);
+}
+
+.level-up__card {
+  padding: 4.5cqw 4.5cqw 6.5cqw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9cqw;
+}
+
+.level-up__level-tag {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.9cqw;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 2.22cqw;
+  color: var(--color-ink);
+}
+
+.level-up__level-tag-heart {
+  width: 2cqw;
+  height: auto;
+}
+
+.level-up__title-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5cqw;
+}
+
+.level-up__sparkle {
+  width: 3cqw;
+  height: auto;
+}
+
+.level-up__title {
+  margin: 0;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 6.3cqw;
+  line-height: 1;
+  color: var(--color-rose);
+  -webkit-text-stroke: 0.14cqw var(--color-maroon);
+}
+
+.level-up__title-heart {
+  width: 3.3cqw;
+  height: auto;
+  margin: 0.3cqw 0;
+}
+
+.level-up__congrats {
+  margin: 0;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 3.7cqw;
+  color: var(--color-rose);
+}
+
+.level-up__desc {
+  margin: 0;
+  text-align: center;
+  font-family: var(--font-arcade);
+  font-weight: 400;
+  font-size: 2.6cqw;
+  line-height: 1.4;
+  color: var(--color-ink);
+}
+
+.level-up__desc-highlight {
+  color: var(--color-rose);
+  font-weight: 700;
+}
+
+.level-up__time-bonus {
+  margin: -0.2cqw 0 0;
+  text-align: center;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 1.8cqw;
+  color: var(--color-rose);
+}
+
+.level-up__bag-wrap {
+  position: relative;
+  width: 92%;
+  margin-top: 0.5cqw;
+}
+
+.level-up__bag {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.level-up__bag-heart {
+  position: absolute;
+  width: 2.6cqw;
+  height: auto;
+}
+
+.level-up__bag-heart--a {
+  left: -2%;
+  top: 12%;
+}
+
+.level-up__bag-heart--b {
+  right: -2%;
+  top: 32%;
+}
+
+.level-up__cta {
+  position: relative;
+  width: 100%;
+  height: 8cqw;
+  margin-top: 0.9cqw;
+}
+
+.level-up__cta .pixel-button__label {
+  font-size: 3.15cqw;
+}
+
+.level-up__cta .pixel-button__chevron {
+  font-size: 2.4cqw;
+}
+
+.level-up__progress-track {
+  width: 30%;
+  height: 0.74cqw;
+  background: rgba(247, 237, 222, 0.35);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.level-up__progress-fill {
+  height: 100%;
+  background: var(--color-cream);
+  border-radius: 999px;
+  transition: width 0.1s linear;
+}

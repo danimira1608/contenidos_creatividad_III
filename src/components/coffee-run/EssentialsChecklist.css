@@ -1,0 +1,79 @@
+.essentials-checklist {
+  position: absolute;
+  left: 0.93%;
+  top: 8.27%;
+  width: 96.3%;
+  height: 7.04%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.22cqw;
+  box-sizing: border-box;
+  background: rgba(247, 237, 222, 0.85);
+  border: 0.37cqw solid var(--color-rose);
+  border-radius: 0.74cqw;
+}
+
+.essentials-checklist__group {
+  display: flex;
+  align-items: center;
+  gap: 1.11cqw;
+}
+
+.essentials-checklist__title {
+  margin: 0;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 1.85cqw;
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+
+.essentials-checklist__items {
+  display: flex;
+  align-items: center;
+  gap: 1.48cqw;
+}
+
+.essentials-checklist__slot {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.essentials-checklist__icon {
+  height: 3.7cqw;
+  width: auto;
+  object-fit: contain;
+}
+
+.essentials-checklist__bonus {
+  display: flex;
+  align-items: center;
+  gap: 0.74cqw;
+}
+
+.essentials-checklist__bonus-icon {
+  height: 4.63cqw;
+  width: auto;
+  object-fit: contain;
+}
+
+.essentials-checklist__bonus-points {
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 1.85cqw;
+  color: var(--color-ink);
+}
+
+.essentials-checklist__bonus-heart {
+  width: 2.22cqw;
+  height: auto;
+}
+
+.essentials-checklist__bonus-count {
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 1.85cqw;
+  color: var(--color-ink);
+}

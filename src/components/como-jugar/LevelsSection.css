@@ -1,0 +1,18 @@
+.levels-section {
+  left: 4.81%;
+  top: 54.75%;
+  width: 91.3%;
+  height: 30.43%;
+}
+
+.levels-section .section-panel__content {
+  left: 8%;
+  right: 8%;
+  align-items: center;
+  justify-content: center;
+}
+
+.levels-section__banner {
+  width: 100%;
+  height: auto;
+}

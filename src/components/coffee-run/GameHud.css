@@ -1,0 +1,79 @@
+.game-hud {
+  position: absolute;
+  left: 0.93%;
+  top: 0.62%;
+  width: 96.3%;
+  height: 6.91%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.22cqw;
+  box-sizing: border-box;
+  background: rgba(247, 237, 222, 0.85);
+  border: 0.37cqw solid var(--color-rose);
+  border-radius: 0.74cqw;
+}
+
+.game-hud__block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.37cqw;
+}
+
+.game-hud__label {
+  margin: 0;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 1.85cqw;
+  line-height: 1;
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+
+.game-hud__label--big {
+  font-size: 2.04cqw;
+}
+
+.game-hud__value {
+  margin: 0;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 2.04cqw;
+  line-height: 1;
+  color: var(--color-rose);
+  white-space: nowrap;
+}
+
+.game-hud__lives {
+  display: flex;
+  align-items: center;
+  gap: 0.56cqw;
+}
+
+.game-hud__heart {
+  width: 2.96cqw;
+  height: auto;
+}
+
+.game-hud__pause {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.44cqw;
+  height: 4.44cqw;
+  margin: 0;
+  padding: 0;
+  background: var(--color-rose);
+  border: 0.28cqw solid var(--color-ink);
+  border-radius: 0.56cqw;
+  cursor: pointer;
+  font-family: var(--font-arcade);
+  font-size: 1.85cqw;
+  line-height: 1;
+  color: var(--color-cream);
+}
+
+.game-hud__pause:hover {
+  filter: brightness(1.05);
+}

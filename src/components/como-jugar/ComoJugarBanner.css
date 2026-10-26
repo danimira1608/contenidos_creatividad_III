@@ -1,0 +1,79 @@
+.como-jugar-banner {
+  position: absolute;
+  inset: 0;
+}
+
+.como-jugar-banner__tab {
+  position: absolute;
+  left: 50%;
+  top: 5.68%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.3cqw;
+  width: 44.44%;
+  height: 4.32%;
+  margin: 0;
+  background: #efdfdc;
+  border: 0.37cqw solid var(--color-rose);
+  border-radius: 0.56cqw;
+}
+
+.como-jugar-banner__heart {
+  width: 2.22cqw;
+  height: auto;
+}
+
+.como-jugar-banner__sparkle {
+  position: absolute;
+  width: 4.5%;
+  height: auto;
+  top: 2%;
+}
+
+.como-jugar-banner__sparkle--left {
+  left: 14%;
+}
+
+.como-jugar-banner__sparkle--right {
+  left: 82%;
+}
+
+.como-jugar-banner__title {
+  margin: 0;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 3.33cqw;
+  line-height: 1;
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+
+.como-jugar-banner__intro {
+  position: absolute;
+  left: 50%;
+  top: 11.5%;
+  transform: translateX(-50%);
+  width: 74%;
+  margin: 0;
+  text-align: center;
+  font-family: var(--font-arcade);
+  font-weight: 400;
+  font-size: 2.04cqw;
+  line-height: 1.3;
+  color: var(--color-ink);
+}
+
+.como-jugar-banner__tagline {
+  position: absolute;
+  left: 50%;
+  top: 15.7%;
+  transform: translateX(-50%);
+  width: 74%;
+  margin: 0;
+  text-align: center;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 2.22cqw;
+}

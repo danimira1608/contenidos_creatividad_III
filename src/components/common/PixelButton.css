@@ -1,0 +1,59 @@
+.pixel-button {
+  position: absolute;
+}
+
+.pixel-button__shadow {
+  position: absolute;
+  inset: 0;
+  transform: translate(2.2%, 2.2%);
+  background: var(--color-maroon);
+  border-radius: 1.1cqw;
+}
+
+.pixel-button__face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.85cqw;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  color: var(--color-cream);
+  background: var(--color-rose);
+  border: 0.46cqw solid var(--color-ink);
+  border-radius: 1.1cqw;
+  transition: transform 0.15s ease;
+}
+
+.pixel-button__face:hover {
+  transform: translate(-1%, -1%);
+}
+
+.pixel-button__face:active {
+  transform: translate(0, 0);
+}
+
+.pixel-button--pressed .pixel-button__face {
+  transform: translate(1.8%, 1.8%) scale(0.94);
+  transition: transform 0.08s ease-out;
+}
+
+.pixel-button--pressed .pixel-button__shadow {
+  transform: translate(0.6%, 0.6%);
+  transition: transform 0.08s ease-out;
+}
+
+.pixel-button__chevron {
+  font-size: 3.33cqw;
+  line-height: 1;
+}
+
+.pixel-button__label {
+  font-size: 5cqw;
+  line-height: 1;
+  white-space: nowrap;
+}

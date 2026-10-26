@@ -1,0 +1,33 @@
+.screen-navigator {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px;
+  background: rgba(20, 13, 15, 0.85);
+  border-radius: 10px;
+  font-family: system-ui, sans-serif;
+  font-size: 13px;
+}
+
+.screen-navigator__button,
+.screen-navigator__select {
+  height: 30px;
+  border: none;
+  border-radius: 6px;
+  background: #fbeceb;
+  color: #2b1d20;
+  font: inherit;
+  cursor: pointer;
+}
+
+.screen-navigator__button {
+  width: 32px;
+}
+
+.screen-navigator__select {
+  padding: 0 6px;
+}

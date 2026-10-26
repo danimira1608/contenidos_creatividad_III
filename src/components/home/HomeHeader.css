@@ -1,0 +1,99 @@
+.home-header {
+  position: absolute;
+  inset: 0;
+}
+
+.home-header__logo {
+  position: absolute;
+  left: 32.87%;
+  top: 7.04%;
+  width: 32.5%;
+  height: auto;
+}
+
+.home-header__title {
+  margin: 0;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 10.74cqw;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.home-header__title-back,
+.home-header__title-front {
+  position: absolute;
+}
+
+.home-header__title-back {
+  left: 28.8%;
+  top: 13.7%;
+  color: var(--color-maroon);
+}
+
+.home-header__title-front {
+  left: 28.15%;
+  top: 13.27%;
+  color: var(--color-rose);
+}
+
+.home-header__divider {
+  position: absolute;
+  left: 17.87%;
+  top: 22.28%;
+  width: 62.5%;
+  height: auto;
+}
+
+.home-header__sparkle {
+  position: absolute;
+  width: 5.37%;
+  height: auto;
+}
+
+.home-header__sparkle--right {
+  left: 83.89%;
+  top: 14.57%;
+}
+
+.home-header__sparkle--left {
+  left: 11.02%;
+  top: 16.2%;
+  width: 4.07%;
+}
+
+.home-header__heart {
+  position: absolute;
+  left: 6%;
+  top: 21.3%;
+  width: 5.6%;
+  height: 2.8%;
+}
+
+.home-header__heart-base {
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-size: 655.34% 100%;
+  background-position: left top;
+}
+
+.home-header__heart-shine {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    115deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.9) 50%,
+    transparent 65%
+  );
+  background-repeat: no-repeat;
+  background-size: 320% 320%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 655.34% 100%;
+  mask-size: 655.34% 100%;
+  -webkit-mask-position: left top;
+  mask-position: left top;
+  pointer-events: none;
+}

@@ -1,0 +1,167 @@
+.bag-carousel {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.bag-carousel__arrow {
+  pointer-events: auto;
+}
+
+/* Recorta lo que asoma de las carteras vecinas justo en el borde rosa del cabinet */
+.bag-carousel__peek-clip {
+  position: absolute;
+  inset: 0.46% 2.31% 0.62% 0.46%;
+  overflow: hidden;
+}
+
+.bag-carousel__glow {
+  position: absolute;
+  top: 44.7%;
+  width: 19.4%;
+  height: 3.5%;
+  background: var(--color-rose);
+  opacity: 0.25;
+  filter: blur(8px);
+  border-radius: 50%;
+}
+
+.bag-carousel__glow--left {
+  left: -10.96%;
+}
+
+.bag-carousel__glow--right {
+  left: 84.29%;
+}
+
+.bag-carousel__peek {
+  position: absolute;
+  top: 27.62%;
+  width: 26.67%;
+  height: auto;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.bag-carousel__peek--left {
+  left: -10.96%;
+}
+
+.bag-carousel__peek--right {
+  left: 84.29%;
+}
+
+.bag-carousel__shadow {
+  position: absolute;
+  left: 31.76%;
+  top: 51.6%;
+  width: 34.54%;
+  height: 3.5%;
+  background: var(--color-rose);
+  opacity: 0.25;
+  filter: blur(8px);
+  border-radius: 50%;
+}
+
+.bag-carousel__selected {
+  position: absolute;
+  left: 30.56%;
+  top: 27.78%;
+  width: 37.04%;
+  height: auto;
+  object-fit: contain;
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+.bag-carousel__selected--out-next {
+  transform: translateX(35%) scale(0.55);
+  opacity: 0;
+}
+
+.bag-carousel__selected--out-prev {
+  transform: translateX(-35%) scale(0.55);
+  opacity: 0;
+}
+
+.bag-carousel__selected--in-next {
+  transition: none;
+  transform: translateX(-35%) scale(0.55);
+  opacity: 0;
+}
+
+.bag-carousel__selected--in-prev {
+  transition: none;
+  transform: translateX(35%) scale(0.55);
+  opacity: 0;
+}
+
+.bag-carousel__label {
+  position: absolute;
+  left: 50%;
+  top: 54.94%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 3.15cqw;
+  color: var(--color-rose);
+  white-space: nowrap;
+}
+
+.bag-carousel__dots {
+  position: absolute;
+  left: 50%;
+  top: 58.27%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 1.85cqw;
+}
+
+.bag-carousel__dot {
+  width: 1.67cqw;
+  height: 1.67cqw;
+  border-radius: 50%;
+  border: 0.19cqw solid var(--color-rose);
+  background: transparent;
+}
+
+.bag-carousel__dot--active {
+  width: 1.85cqw;
+  height: 1.85cqw;
+  background: var(--color-rose);
+  border-color: var(--color-rose);
+  outline: 0.19cqw solid var(--color-ink);
+  outline-offset: 0.28cqw;
+}
+
+.bag-carousel__controls {
+  position: absolute;
+  left: 8.33%;
+  right: 8.33%;
+  top: 62.1%;
+  height: 11.05%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bag-carousel__arrow {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 2.96cqw;
+  line-height: 1;
+  color: var(--color-rose);
+}
+
+.bag-carousel__joystick {
+  width: 19.54%;
+  height: auto;
+}

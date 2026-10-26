@@ -1,0 +1,260 @@
+.level-intro {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20, 13, 15, 0.6);
+}
+
+@keyframes level-intro-count-pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.level-intro__card {
+  padding: 4.5cqw 4.5cqw 5.5cqw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.11cqw;
+}
+
+.level-intro__level-tag {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.9cqw;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 2.2cqw;
+  color: var(--color-ink);
+}
+
+.level-intro__level-tag-heart {
+  width: 1.85cqw;
+  height: auto;
+}
+
+.level-intro__title-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.11cqw;
+  box-sizing: border-box;
+  padding: 1.11cqw 1.85cqw;
+  background: rgba(247, 237, 222, 0.6);
+  border: 0.28cqw solid var(--color-rose);
+  border-radius: 0.56cqw;
+}
+
+.level-intro__title-heart {
+  width: 2cqw;
+  height: auto;
+}
+
+.level-intro__title {
+  margin: 0;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 3.7cqw;
+  line-height: 1;
+  color: var(--color-rose);
+  -webkit-text-stroke: 0.09cqw var(--color-maroon);
+}
+
+.level-intro__subtitle {
+  margin: 0.5cqw 0 0;
+  text-align: center;
+  font-family: var(--font-arcade);
+  font-weight: 400;
+  font-size: 2.2cqw;
+  color: var(--color-ink);
+}
+
+.level-intro__highlight {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.74cqw;
+  text-align: center;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 2.2cqw;
+  color: var(--color-rose);
+}
+
+.level-intro__highlight-heart {
+  width: 1.85cqw;
+  height: auto;
+}
+
+.level-intro__essentials-title {
+  margin: 0.9cqw 0 0;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 2.1cqw;
+  color: var(--color-ink);
+}
+
+.level-intro__grid-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.level-intro__grid-heart {
+  position: absolute;
+  width: 2.4cqw;
+  height: auto;
+  z-index: 1;
+}
+
+.level-intro__grid-heart--a {
+  left: -1.5cqw;
+  top: -1.3cqw;
+}
+
+.level-intro__grid-heart--b {
+  right: -1.5cqw;
+  top: -1.3cqw;
+}
+
+.level-intro__grid {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 1.11cqw;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.level-intro__slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.74cqw;
+  width: 15.5cqw;
+  min-height: 19cqw;
+  box-sizing: border-box;
+  padding: 1.3cqw 0.56cqw;
+  background: rgba(247, 237, 222, 0.5);
+  border: 0.19cqw dashed var(--color-rose);
+  border-radius: 0.56cqw;
+}
+
+.level-intro__slot-icon {
+  max-height: 8cqw;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.level-intro__slot-label {
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 1.7cqw;
+  line-height: 1.2;
+  color: var(--color-ink);
+  text-align: center;
+}
+
+.level-intro__slot-points {
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 1.85cqw;
+  color: var(--color-rose);
+}
+
+.level-intro__divider {
+  display: flex;
+  align-items: center;
+  gap: 0.9cqw;
+  width: 85%;
+  margin-top: 0.5cqw;
+}
+
+.level-intro__divider-line {
+  flex: 1;
+  height: 0;
+  border-top: 0.19cqw dashed var(--color-rose);
+}
+
+.level-intro__divider-heart {
+  width: 1.85cqw;
+  height: auto;
+}
+
+.level-intro__difficulty-note {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6cqw;
+  max-width: 85%;
+  box-sizing: border-box;
+  padding: 1.1cqw 2.4cqw;
+  background: var(--color-rose);
+  border-radius: 0.74cqw;
+}
+
+.level-intro__difficulty-note-icon {
+  font-family: system-ui, sans-serif;
+  font-size: 2.4cqw;
+  line-height: 1;
+  color: var(--color-cream);
+}
+
+.level-intro__difficulty-note-text {
+  margin: 0;
+  font-family: var(--font-arcade);
+  font-weight: 400;
+  font-size: 1.95cqw;
+  line-height: 1.35;
+  color: var(--color-cream);
+  text-align: center;
+}
+
+.level-intro__countdown-label {
+  margin: 0;
+  text-align: center;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 2.1cqw;
+  color: var(--color-ink);
+  letter-spacing: 0.05em;
+}
+
+.level-intro__countdown-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.11cqw;
+}
+
+.level-intro__countdown-heart {
+  width: 2.4cqw;
+  height: auto;
+}
+
+.level-intro__countdown-number {
+  margin: 0;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 6.5cqw;
+  line-height: 1;
+  color: var(--color-rose);
+  -webkit-text-stroke: 0.14cqw var(--color-maroon);
+  animation: level-intro-count-pop 0.5s ease-out;
+}

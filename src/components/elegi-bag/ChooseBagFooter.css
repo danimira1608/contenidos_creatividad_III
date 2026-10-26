@@ -1,0 +1,14 @@
+.choose-bag-footer {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  pointer-events: none;
+}
+
+.choose-bag-footer__cta {
+  left: 29.63%;
+  top: 75.93%;
+  width: 40.74%;
+  height: 6.79%;
+  pointer-events: auto;
+}

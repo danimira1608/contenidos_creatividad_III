@@ -1,0 +1,42 @@
+.ranking-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.74cqw;
+}
+
+.ranking-header__heart-row {
+  display: flex;
+  align-items: center;
+  gap: 1.85cqw;
+}
+
+.ranking-header__heart {
+  width: 8.1cqw;
+  height: auto;
+}
+
+.ranking-header__sparkle {
+  width: 3.7cqw;
+  height: auto;
+}
+
+.ranking-header__title {
+  margin: 0;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 11.5cqw;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: var(--color-rose);
+  -webkit-text-stroke: 0.24cqw var(--color-maroon);
+}
+
+.ranking-header__subtitle {
+  margin: 0;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 2.22cqw;
+  letter-spacing: 0.04em;
+  color: var(--color-ink);
+}

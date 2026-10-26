@@ -1,0 +1,285 @@
+.compartir {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2cqw;
+  padding: 4cqw 0;
+}
+
+.compartir__deco {
+  position: absolute;
+  height: auto;
+  pointer-events: none;
+}
+
+.compartir__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.74cqw;
+  max-width: 80%;
+}
+
+.compartir__title {
+  margin: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  text-align: center;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 10cqw;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: var(--color-rose);
+  -webkit-text-stroke: 0.24cqw var(--color-maroon);
+}
+
+.compartir__subtitle {
+  margin: 0;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 2.22cqw;
+  letter-spacing: 0.04em;
+  color: var(--color-ink);
+}
+
+.compartir__card {
+  position: relative;
+  width: 82%;
+  box-sizing: border-box;
+  padding: 3.6cqw 5cqw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6cqw;
+  background: linear-gradient(180deg, #fbeceb 0%, #f2c9c9 100%);
+  border: 0.46cqw solid var(--color-rose);
+  border-radius: 1.1cqw;
+  box-shadow: 0.9cqw 0.9cqw 0 var(--color-maroon);
+}
+
+
+
+.compartir__showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1cqw;
+  width: 100%;
+}
+
+.compartir__figure {
+  position: relative;
+  width: 39cqw;
+}
+
+.compartir__hailey {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Positioned (as % of the figure) so the bag hangs from Hailey's raised hand
+   with the handle between her fingers. */
+.compartir__bag {
+  --compartir-bag-outline: drop-shadow(0.22cqw 0 0 #3c1e19) drop-shadow(-0.22cqw 0 0 #3c1e19)
+    drop-shadow(0 0.22cqw 0 #3c1e19) drop-shadow(0 -0.22cqw 0 #3c1e19);
+  position: absolute;
+  left: 69%;
+  top: 11.58%;
+  width: 36%;
+  height: auto;
+  /* Pivots on the top of the handle, the point pinched between her fingers. */
+  transform-origin: 50% 2%;
+  animation: compartir-bag-swing 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes compartir-bag-swing {
+  from {
+    transform: rotate(-7deg);
+  }
+  to {
+    transform: rotate(7deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .compartir__bag {
+    animation: none;
+  }
+}
+
+/* Same size as Hailey's image; only her raised hand is opaque. */
+.compartir__hands {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+.compartir__bag-label {
+  margin: 0;
+  text-align: center;
+  font-family: var(--font-arcade);
+  font-weight: 400;
+  font-size: 1.9cqw;
+  color: var(--color-ink);
+}
+
+.compartir__bag-color {
+  font-weight: 700;
+  color: var(--color-rose);
+}
+
+.compartir__score {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1.4cqw 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.37cqw;
+  background: #fbeee6;
+  border: 0.28cqw dashed var(--color-rose);
+  border-radius: 0.74cqw;
+}
+
+.compartir__score-label {
+  display: flex;
+  align-items: center;
+  gap: 0.74cqw;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 2cqw;
+  color: var(--color-rose);
+}
+
+.compartir__score-heart {
+  width: 2cqw;
+  height: auto;
+}
+
+.compartir__score-value {
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 4.6cqw;
+  line-height: 1;
+  color: var(--color-maroon);
+}
+
+.compartir__phrase {
+  margin: 0.4cqw 0 0;
+  padding: 1cqw 2.4cqw;
+  background: var(--color-rose);
+  border-radius: 0.74cqw;
+  text-align: center;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 2.6cqw;
+  letter-spacing: 0.04em;
+  color: var(--color-cream);
+}
+
+.compartir__cta {
+  position: relative;
+  width: 50%;
+  height: 8cqw;
+}
+
+.compartir__cta .pixel-button__face {
+  gap: 1.2cqw;
+}
+
+.compartir__cta .pixel-button__label {
+  font-size: 2.5cqw;
+}
+
+.compartir__cta .pixel-button__chevron {
+  font-size: 2cqw;
+}
+
+/* Screenshot notice shown before the result. */
+.compartir-notice {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20, 13, 15, 0.6);
+  cursor: pointer;
+}
+
+.compartir-notice__card {
+  padding: 6cqw 6cqw 6.5cqw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4cqw;
+}
+
+.compartir-notice__title-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5cqw;
+}
+
+.compartir-notice__sparkle {
+  width: 3cqw;
+  height: auto;
+}
+
+.compartir-notice__title {
+  margin: 0;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 5.6cqw;
+  line-height: 1;
+  color: var(--color-rose);
+  -webkit-text-stroke: 0.14cqw var(--color-maroon);
+}
+
+.compartir-notice__camera {
+  width: 12cqw;
+  height: auto;
+}
+
+.compartir-notice__text {
+  margin: 0;
+  max-width: 90%;
+  text-align: center;
+  font-family: var(--font-arcade);
+  font-weight: 400;
+  font-size: 2.5cqw;
+  line-height: 1.4;
+  color: var(--color-ink);
+}
+
+.compartir-notice__handle {
+  font-weight: 700;
+  color: var(--color-rose);
+}
+
+.compartir-notice__hint {
+  margin: 1cqw 0 0;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 1.85cqw;
+  letter-spacing: 0.05em;
+  color: var(--color-maroon);
+  animation: compartir-notice-blink 1.4s ease-in-out infinite;
+}
+
+@keyframes compartir-notice-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}

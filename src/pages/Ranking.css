@@ -1,0 +1,55 @@
+.ranking {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.8cqw;
+  /* Extra bottom room keeps the buttons clear of the frame's corner hearts. */
+  padding: 3cqw 0 17cqw;
+}
+
+.ranking__outside {
+  margin: 0;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 2.4cqw;
+  letter-spacing: 0.04em;
+  color: var(--color-maroon);
+}
+
+.ranking__outside-rank {
+  font-size: 3.4cqw;
+  color: var(--color-rose);
+}
+
+.ranking__actions {
+  display: flex;
+  justify-content: center;
+  gap: 3cqw;
+  width: 89%;
+}
+
+.ranking__cta {
+  flex: 1;
+  position: relative;
+  height: 8cqw;
+}
+
+.ranking__cta .pixel-button__face {
+  gap: 1.2cqw;
+}
+
+.ranking__cta .pixel-button__label {
+  font-size: 2.5cqw;
+}
+
+.ranking__cta .pixel-button__chevron {
+  font-size: 2cqw;
+}
+
+.ranking__cta--secondary .pixel-button__face {
+  color: var(--color-rose);
+  background: var(--color-cream);
+}

@@ -1,0 +1,171 @@
+.bag-picker-header {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.bag-picker-header__name-input {
+  pointer-events: auto;
+}
+
+.bag-picker-header__title-row {
+  position: absolute;
+  left: 50%;
+  top: 3.7%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.85cqw;
+}
+
+.bag-picker-header__heart {
+  width: 3.61cqw;
+  height: auto;
+}
+
+.bag-picker-header__title {
+  margin: 0;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 4.63cqw;
+  line-height: 1;
+  color: var(--color-rose);
+  white-space: nowrap;
+}
+
+.bag-picker-header__subtitle {
+  position: absolute;
+  left: 50%;
+  top: 9%;
+  transform: translateX(-50%);
+  width: 65%;
+  margin: 0;
+  text-align: center;
+  font-family: var(--font-arcade);
+  font-weight: 400;
+  font-size: 2.96cqw;
+  line-height: 1.3;
+  color: var(--color-ink);
+}
+
+.bag-picker-header__sparkle {
+  position: absolute;
+  width: 3.7%;
+  height: auto;
+}
+
+.bag-picker-header__sparkle--left {
+  left: 13%;
+  top: 7%;
+}
+
+.bag-picker-header__sparkle--right {
+  left: 84%;
+  top: 14.8%;
+}
+
+.bag-picker-header__name-label {
+  position: absolute;
+  left: 50%;
+  top: 16.8%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 2.6cqw;
+  color: var(--color-rose);
+}
+
+@keyframes bag-picker-header-pop-in {
+  0% {
+    transform: translateX(-50%) scale(0.6);
+    opacity: 0;
+  }
+  70% {
+    transform: translateX(-50%) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+}
+
+.bag-picker-header__name-confirmed {
+  position: absolute;
+  left: 50%;
+  top: 16.1%;
+  transform: translateX(-50%);
+  margin: 0;
+  text-align: center;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 3.7cqw;
+  color: var(--color-rose);
+  white-space: nowrap;
+  animation: bag-picker-header-pop-in 0.35s ease-out;
+}
+
+.bag-picker-header__name-input {
+  position: absolute;
+  left: 26%;
+  top: 19.3%;
+  width: 48%;
+  height: 4.2%;
+  box-sizing: border-box;
+  padding: 0 2cqw;
+  background: #f8f3ee;
+  border: 0.37cqw solid var(--color-rose);
+  border-radius: 1.11cqw;
+  font-family: var(--font-arcade);
+  font-size: 2.3cqw;
+  color: var(--color-ink);
+}
+
+.bag-picker-header__name-input::placeholder {
+  color: #998c87;
+}
+
+.bag-picker-header__name-input:focus {
+  outline: none;
+  border-color: var(--color-maroon);
+}
+
+@keyframes bag-picker-header-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-2.5%);
+  }
+  40% {
+    transform: translateX(2.5%);
+  }
+  60% {
+    transform: translateX(-1.5%);
+  }
+  80% {
+    transform: translateX(1.5%);
+  }
+}
+
+.bag-picker-header__name-input--error {
+  border-color: var(--color-maroon);
+  animation: bag-picker-header-shake 0.35s ease-in-out;
+}
+
+.bag-picker-header__name-error {
+  position: absolute;
+  left: 50%;
+  top: 24.2%;
+  transform: translateX(-50%);
+  margin: 0;
+  text-align: center;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 1.48cqw;
+  color: var(--color-maroon);
+  white-space: nowrap;
+}

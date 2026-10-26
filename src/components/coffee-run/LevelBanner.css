@@ -1,0 +1,30 @@
+.level-banner {
+  position: absolute;
+  left: 27.31%;
+  top: 16.42%;
+  width: 42.59%;
+  height: 5.56%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.48cqw;
+  box-sizing: border-box;
+  background: var(--color-cream);
+  border: 0.46cqw solid var(--color-rose);
+  border-radius: 0.56cqw;
+}
+
+.level-banner__heart {
+  width: 2.96cqw;
+  height: auto;
+}
+
+.level-banner__title {
+  margin: 0;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 3.7cqw;
+  line-height: 1;
+  color: var(--color-ink);
+  white-space: nowrap;
+}

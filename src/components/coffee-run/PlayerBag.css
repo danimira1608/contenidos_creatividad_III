@@ -1,0 +1,43 @@
+.player-bag {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.player-bag__image {
+  position: absolute;
+  top: 79.5%;
+  width: 20%;
+  height: auto;
+  transform: translateX(-50%);
+  transition: left 0.2s ease-out;
+}
+
+.player-bag__arrow {
+  position: absolute;
+  top: 87.04%;
+  margin: 0;
+  padding: 0.5cqw;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 2.96cqw;
+  line-height: 1;
+  color: var(--color-rose);
+  pointer-events: auto;
+}
+
+.player-bag__arrow--left {
+  left: 3.5%;
+}
+
+.player-bag__arrow--right {
+  left: 82.5%;
+}
+
+.player-bag__arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
