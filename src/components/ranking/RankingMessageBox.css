@@ -96,11 +96,12 @@
 .ranking-message__text {
   margin: 0;
   text-align: center;
-  font-family: var(--font-arcade);
-  font-weight: 700;
+  font-family: var(--font-body);
+  font-weight: 600;
   font-size: 2.8cqw;
   line-height: 1.4;
   color: var(--color-ink);
+  text-transform: lowercase;
 }
 
 .ranking-message__highlight {

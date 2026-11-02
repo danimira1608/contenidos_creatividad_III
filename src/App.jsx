@@ -7,6 +7,7 @@ import LevelPlay from './pages/LevelPlay'
 import Ranking from './pages/Ranking'
 import Compartir from './pages/Compartir'
 import ScreenNavigator from './components/common/ScreenNavigator'
+import FullscreenButton from './components/common/FullscreenButton'
 import bagBlush from './assets/elegi-bag/bag-blush.png'
 import bagTaupe from './assets/elegi-bag/bag-taupe.png'
 import bagButter from './assets/elegi-bag/bag-butter.png'
@@ -109,7 +110,7 @@ const coffeeRunContent = {
   spawnIntervalMs: 1900,
   backgroundImage: coffeeRunBackground,
   essentialsTitle: 'ESENCIALES:',
-  introSubtitle: 'Estos son tus esenciales.',
+  distractorsTitle: 'DISTRACTORES:',
   introHighlight: '¡Memorizalos!',
   introCountdownLabel: 'EL NIVEL COMIENZA EN...',
   essentialItems: [
@@ -143,7 +144,7 @@ const beachDayContent = {
   spawnIntervalMs: 1600,
   backgroundImage: beachDayBackground,
   essentialsTitle: 'ESENCIALES:',
-  introSubtitle: 'Estos son tus esenciales.',
+  distractorsTitle: 'DISTRACTORES:',
   introHighlight: '¡Memorizalos!',
   introCountdownLabel: 'EL NIVEL COMIENZA EN...',
   difficultyNote: 'Más distractores, menos tiempo y todo cae más rápido.',
@@ -179,7 +180,7 @@ const nightOutContent = {
   spawnIntervalMs: 1350,
   backgroundImage: nightOutBackground,
   essentialsTitle: 'ESENCIALES:',
-  introSubtitle: 'Estos son tus esenciales.',
+  distractorsTitle: 'DISTRACTORES:',
   introHighlight: '¡Memorizalos!',
   introCountdownLabel: 'EL NIVEL COMIENZA EN...',
   difficultyNote: '¡Último nivel! Todo cae más rápido que nunca.',
@@ -343,6 +344,7 @@ function App() {
         />
       </Routes>
       <ScreenNavigator />
+      <FullscreenButton />
     </BrowserRouter>
   )
 }

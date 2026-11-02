@@ -42,11 +42,12 @@
   width: 65%;
   margin: 0;
   text-align: center;
-  font-family: var(--font-arcade);
-  font-weight: 400;
+  font-family: var(--font-body);
+  font-weight: 600;
   font-size: 2.96cqw;
   line-height: 1.3;
-  color: var(--color-ink);
+  color: var(--color-text-soft);
+  text-transform: lowercase;
 }
 
 .bag-picker-header__sparkle {
@@ -118,9 +119,10 @@
   background: #f8f3ee;
   border: 0.37cqw solid var(--color-rose);
   border-radius: 1.11cqw;
-  font-family: var(--font-arcade);
+  font-family: var(--font-body);
+  font-weight: 600;
   font-size: 2.3cqw;
-  color: var(--color-ink);
+  color: var(--color-text-soft);
 }
 
 .bag-picker-header__name-input::placeholder {
@@ -163,9 +165,10 @@
   transform: translateX(-50%);
   margin: 0;
   text-align: center;
-  font-family: var(--font-arcade);
-  font-weight: 700;
+  font-family: var(--font-body);
+  font-weight: 600;
   font-size: 1.48cqw;
   color: var(--color-maroon);
   white-space: nowrap;
+  text-transform: lowercase;
 }

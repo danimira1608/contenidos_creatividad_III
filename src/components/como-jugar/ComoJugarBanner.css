@@ -58,11 +58,12 @@
   width: 74%;
   margin: 0;
   text-align: center;
-  font-family: var(--font-arcade);
-  font-weight: 400;
+  font-family: var(--font-body);
+  font-weight: 600;
   font-size: 2.04cqw;
   line-height: 1.3;
-  color: var(--color-ink);
+  color: var(--color-text-soft);
+  text-transform: lowercase;
 }
 
 .como-jugar-banner__tagline {

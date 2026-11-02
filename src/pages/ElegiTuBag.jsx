@@ -4,6 +4,7 @@ import ArcadeFrame from '../components/layout/ArcadeFrame'
 import BagPickerHeader from '../components/elegi-bag/BagPickerHeader'
 import BagCarousel from '../components/elegi-bag/BagCarousel'
 import ChooseBagFooter from '../components/elegi-bag/ChooseBagFooter'
+import { playSound } from '../utils/sounds'
 
 const SLIDE_OUT_MS = 180
 
@@ -20,6 +21,7 @@ function ElegiTuBag({ content, bagOptions, onSelectBag, onSetName, onResetTotalS
   const changeBag = (direction) => {
     if (transitionPhase !== 'idle') return
 
+    playSound('select')
     setTransitionDirection(direction)
     setTransitionPhase('out')
 

@@ -5,12 +5,14 @@ import GameHud from '../components/coffee-run/GameHud'
 import EssentialsChecklist from '../components/coffee-run/EssentialsChecklist'
 import LevelBanner from '../components/coffee-run/LevelBanner'
 import FallingItemsLayer from '../components/coffee-run/FallingItemsLayer'
+import CatchFeedbackLayer from '../components/coffee-run/CatchFeedbackLayer'
 import PlayerBag from '../components/coffee-run/PlayerBag'
 import LevelUpOverlay from '../components/coffee-run/LevelUpOverlay'
 import GameOverOverlay from '../components/coffee-run/GameOverOverlay'
 import PauseOverlay from '../components/coffee-run/PauseOverlay'
 import LevelIntroOverlay from '../components/coffee-run/LevelIntroOverlay'
 import { saveLastRun } from '../utils/lastRun'
+import { playSound } from '../utils/sounds'
 import './LevelPlay.css'
 
 const WIN_REDIRECT_MS = 7000
@@ -26,6 +28,7 @@ const BAG_STEP = 10
 const INTRO_COUNT_START = 3
 const INTRO_TICK_MS = 2500
 const MAX_ATTEMPTS = 2
+const FEEDBACK_MS = 1300
 
 function pickRandom(list) {
   return list[Math.floor(Math.random() * list.length)]
@@ -76,6 +79,11 @@ function createFallingItem(content, currentLives) {
   }
 }
 
+// Keeps the notice inside the frame even when the bag is at an edge.
+function clampFeedbackX(xPercent) {
+  return Math.min(72, Math.max(28, xPercent))
+}
+
 function formatScore(score) {
   return String(score).padStart(5, '0')
 }
@@ -96,6 +104,7 @@ function LevelPlay({ content, selectedBag, playerName, totalScore, onLevelComple
   const [bonusLivesGained, setBonusLivesGained] = useState(0)
   const [extraPoints, setExtraPoints] = useState(0)
   const [fallingItems, setFallingItems] = useState([])
+  const [catchFeedback, setCatchFeedback] = useState([])
   const [isPaused, setIsPaused] = useState(false)
   const [introCount, setIntroCount] = useState(INTRO_COUNT_START)
   const [attemptNumber, setAttemptNumber] = useState(1)
@@ -138,6 +147,17 @@ function LevelPlay({ content, selectedBag, playerName, totalScore, onLevelComple
     if (isRoundOver) return
     setIsPaused((current) => !current)
   }
+
+  // Countdown beeps, with a higher "go" when the level starts.
+  useEffect(() => {
+    if (preview || introCount > INTRO_COUNT_START || introCount < 0) return
+    playSound(introCount === 0 ? 'go' : 'tick')
+  }, [introCount, preview])
+
+  useEffect(() => {
+    if (!isRoundOver || preview) return
+    playSound(isWin ? 'levelUp' : 'gameOver')
+  }, [isRoundOver, isWin, preview])
 
   useEffect(() => {
     if (introCount <= 0 || preview) return undefined
@@ -188,6 +208,7 @@ function LevelPlay({ content, selectedBag, playerName, totalScore, onLevelComple
     setBonusLivesGained(0)
     setExtraPoints(0)
     setFallingItems([])
+    setCatchFeedback([])
     fallingItemsRef.current = []
     spawnTimerRef.current = 0
     setIsPaused(false)
@@ -217,10 +238,12 @@ function LevelPlay({ content, selectedBag, playerName, totalScore, onLevelComple
   }, [isRoundOver, isWin, canRetry])
 
   const moveLeft = () => {
+    playSound('move')
     setBagPosition((current) => Math.max(BAG_MIN_POSITION, current - BAG_STEP))
   }
 
   const moveRight = () => {
+    playSound('move')
     setBagPosition((current) => Math.min(BAG_MAX_POSITION, current + BAG_STEP))
   }
 
@@ -240,7 +263,38 @@ function LevelPlay({ content, selectedBag, playerName, totalScore, onLevelComple
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [])
 
+  const showCatchFeedback = (item, notice) => {
+    const entry = { id: item.id, xPercent: clampFeedbackX(item.xPercent), ...notice }
+    setCatchFeedback((current) => [...current, entry])
+    setTimeout(() => {
+      setCatchFeedback((current) => current.filter((existing) => existing.id !== entry.id))
+    }, FEEDBACK_MS)
+  }
+
+  const describeCatch = (item) => {
+    if (item.kind === 'essential') {
+      const def = content.essentialItems.find((essential) => essential.id === item.itemId)
+      return { tone: 'gain', amount: `+${item.points ?? 10}`, label: def?.label.toUpperCase() }
+    }
+    if (item.kind === 'distractor') {
+      return { tone: 'loss', amount: '-1', label: 'VIDA' }
+    }
+    if (item.itemId === 'phone-case') {
+      return { tone: 'bonus', amount: '+50', label: 'PUNTAJE EXTRA' }
+    }
+    if (livesRef.current >= content.maxLives) {
+      return { tone: 'bonus', amount: '', label: 'VIDAS AL MÁXIMO' }
+    }
+    return { tone: 'bonus', amount: '+1', label: 'VIDA' }
+  }
+
   const applyCatchEffect = (item) => {
+    const notice = describeCatch(item)
+    showCatchFeedback(item, notice)
+    if (item.kind === 'essential') playSound('catch')
+    else if (item.kind === 'distractor') playSound('hurt')
+    else if (item.itemId === 'phone-case') playSound('bonus')
+    else if (notice.amount) playSound('life')
     if (item.kind === 'essential') {
       setScore((current) => current + (item.points ?? 10))
       setEssentialsCollected((current) => (current.includes(item.itemId) ? current : [...current, item.itemId]))
@@ -326,6 +380,7 @@ function LevelPlay({ content, selectedBag, playerName, totalScore, onLevelComple
         <div className="level-play__overlay" />
 
         <FallingItemsLayer items={fallingItems} />
+        <CatchFeedbackLayer items={catchFeedback} />
         <LevelBanner title={content.levelName} />
 
         <GameHud
@@ -360,7 +415,8 @@ function LevelPlay({ content, selectedBag, playerName, totalScore, onLevelComple
             levelName={content.levelName}
             essentialsTitle={content.essentialsTitle}
             essentialItems={content.essentialItems}
-            introSubtitle={content.introSubtitle}
+            distractorsTitle={content.distractorsTitle}
+            distractorItems={content.distractorItems}
             introHighlight={content.introHighlight}
             difficultyNote={content.difficultyNote}
             countdownLabel={content.introCountdownLabel}

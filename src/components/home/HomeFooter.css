@@ -12,11 +12,12 @@
   transform: translateX(-50%);
   margin: 0;
   text-align: center;
-  font-family: var(--font-arcade);
-  font-weight: 700;
+  font-family: var(--font-body);
+  font-weight: 600;
   font-size: 3.33cqw;
   line-height: 118%;
-  color: var(--color-ink);
+  color: var(--color-text-soft);
+  text-transform: lowercase;
 }
 
 .home-footer__sparkle {

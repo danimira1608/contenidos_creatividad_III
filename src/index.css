@@ -3,6 +3,7 @@
   --color-rose: #c96673;
   --color-maroon: #9c3d4c;
   --color-cream: #f7edde;
+  --color-text-soft: #4a4442;
   --gradient-home: linear-gradient(
     152deg,
     rgb(248, 242, 236) 8.7%,
@@ -12,6 +13,8 @@
 
   --font-brand: 'Archivo', system-ui, sans-serif;
   --font-arcade: 'Pixelify Sans', system-ui, sans-serif;
+  /* Sentences and descriptions; the pixel font is hard to read at small sizes. */
+  --font-body: 'Figtree', system-ui, sans-serif;
 
   color-scheme: light;
 }

@@ -1,0 +1,20 @@
+.fullscreen-button {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 1000;
+  padding: 7px 12px;
+  border: 2px solid var(--color-rose);
+  border-radius: 6px;
+  background: var(--color-cream);
+  color: var(--color-maroon);
+  font-family: var(--font-arcade);
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.fullscreen-button:hover {
+  opacity: 1;
+}

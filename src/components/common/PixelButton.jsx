@@ -1,10 +1,18 @@
+import { playSound } from '../../utils/sounds'
 import './PixelButton.css'
 
 function PixelButton({ children, onClick, type = 'button', className = '', pressed = false }) {
   return (
     <div className={`pixel-button ${className} ${pressed ? 'pixel-button--pressed' : ''}`}>
       <span className="pixel-button__shadow" aria-hidden="true" />
-      <button type={type} className="pixel-button__face" onClick={onClick}>
+      <button
+        type={type}
+        className="pixel-button__face"
+        onClick={(event) => {
+          playSound('click')
+          onClick?.(event)
+        }}
+      >
         <span className="pixel-button__chevron" aria-hidden="true">
           &gt;
         </span>

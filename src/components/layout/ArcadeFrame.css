@@ -3,12 +3,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px 12px;
 }
 
 .arcade-cabinet {
   position: relative;
-  width: min(100%, 54svh, 680px);
+  /* As big as the screen allows while keeping the 2:3 cabinet shape. */
+  width: min(100vw, 100svh * 2 / 3);
   aspect-ratio: 2 / 3;
   container-type: inline-size;
   background-image: var(--gradient-home);
