@@ -24,7 +24,7 @@
   margin: 0;
   font-family: var(--font-arcade);
   font-weight: 700;
-  font-size: 1.85cqw;
+  font-size: 2.6cqw;
   color: var(--color-ink);
   white-space: nowrap;
 }
@@ -42,7 +42,7 @@
 }
 
 .essentials-checklist__icon {
-  height: 3.7cqw;
+  height: 4.8cqw;
   width: auto;
   object-fit: contain;
 }
@@ -54,7 +54,7 @@
 }
 
 .essentials-checklist__bonus-icon {
-  height: 4.63cqw;
+  height: 5.4cqw;
   width: auto;
   object-fit: contain;
 }
@@ -62,18 +62,18 @@
 .essentials-checklist__bonus-points {
   font-family: var(--font-arcade);
   font-weight: 700;
-  font-size: 1.85cqw;
+  font-size: 2.6cqw;
   color: var(--color-ink);
 }
 
 .essentials-checklist__bonus-heart {
-  width: 2.22cqw;
+  width: 2.8cqw;
   height: auto;
 }
 
 .essentials-checklist__bonus-count {
   font-family: var(--font-arcade);
   font-weight: 700;
-  font-size: 1.85cqw;
+  font-size: 2.6cqw;
   color: var(--color-ink);
 }

@@ -60,7 +60,7 @@ const comoJugarContent = {
   howItWorksTitle: 'CÓMO FUNCIONA',
   howItWorksItems: [
     { label: 'MOVER', description: 'Usá el joystick para mover la canasta.' },
-    { label: 'ATRAPÁ', description: 'Atrapá los productos rhode correctos para sumar puntos.' },
+    { label: 'ATRAPÁ', description: 'Atrapá los productos correctos para sumar puntos.' },
     { label: 'EVITÁ', description: 'No atrapes los distractores o perderás una vida.' },
   ],
   infoTitle: 'INFORMACIÓN',

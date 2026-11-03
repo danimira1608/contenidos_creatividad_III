@@ -17,6 +17,71 @@
   overflow: hidden;
 }
 
+.arcade-mockup,
+.arcade-mockup__screen {
+  display: contents;
+}
+
+.arcade-mockup__joystick {
+  display: none;
+}
+
+/* Wide screens: show the arcade machine photo and fit the game into its
+   screen. Positions are percentages of the photo (1672 x 941). */
+@media (orientation: landscape) and (min-height: 500px) {
+  .arcade-viewport {
+    position: relative;
+    height: 100svh;
+    overflow: hidden;
+  }
+
+  .arcade-mockup {
+    display: block;
+    position: absolute;
+    /* Zoomed in so the game is bigger: the photo is taller than the screen,
+       anchored near the top, and the base of the cabinet is cropped off. */
+    left: 50%;
+    top: 0;
+    width: max(100vw, 117svh * 1672 / 941);
+    aspect-ratio: 1672 / 941;
+    transform: translate(-50%, -1.5%);
+    background-size: cover;
+  }
+
+  .arcade-mockup__screen {
+    position: absolute;
+    left: 37.38%;
+    top: 18.385%;
+    width: 25.24%;
+    height: 57.49%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    container-type: size;
+    /* Same dark as the photo's screen bezel, so the strips beside the game
+       read as part of the frame. */
+    background: #220708;
+    border-radius: 3.5% / 2.8%;
+    overflow: hidden;
+  }
+
+  .arcade-mockup__joystick {
+    display: block;
+    position: absolute;
+    left: 39.354%;
+    top: 73.433%;
+    width: 3.947%;
+    height: auto;
+    pointer-events: none;
+  }
+
+  .arcade-mockup__screen .arcade-cabinet {
+    width: min(100cqw, 100cqh * 2 / 3);
+    border: 0;
+    border-radius: 4% / 2.7%;
+  }
+}
+
 .arcade-cabinet::before {
   content: '';
   position: absolute;
