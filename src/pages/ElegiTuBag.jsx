@@ -8,7 +8,7 @@ import { playSound } from '../utils/sounds'
 
 const SLIDE_OUT_MS = 180
 
-function ElegiTuBag({ content, bagOptions, onSelectBag, onSetName, onResetTotalScore }) {
+function ElegiTuBag({ content, bagOptions, onStartRun, onResetTotalScore }) {
   const [selectedIndex, setSelectedIndex] = useState(0)
   const [name, setName] = useState('')
   const [isNameConfirmed, setIsNameConfirmed] = useState(false)
@@ -65,8 +65,7 @@ function ElegiTuBag({ content, bagOptions, onSelectBag, onSetName, onResetTotalS
 
     setTimeout(() => {
       setIsContinuePressed(false)
-      onSelectBag(bagOptions[selectedIndex])
-      onSetName(name.trim())
+      onStartRun(name.trim(), bagOptions[selectedIndex])
       onResetTotalScore()
       navigate('/coffee-run')
     }, 150)

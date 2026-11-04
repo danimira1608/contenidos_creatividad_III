@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { loadCurrentPlayer, saveCurrentPlayer } from './utils/lastRun'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import ComoJugar from './pages/ComoJugar'
@@ -249,8 +250,17 @@ const mockRivals = [
 ]
 
 function App() {
-  const [selectedBag, setSelectedBag] = useState(bagOptions[0])
-  const [playerName, setPlayerName] = useState('')
+  const [savedPlayer] = useState(loadCurrentPlayer)
+  const [selectedBag, setSelectedBag] = useState(
+    () => bagOptions.find((option) => option.id === savedPlayer?.bagId) || bagOptions[0],
+  )
+  const [playerName, setPlayerName] = useState(savedPlayer?.name || '')
+
+  const startRun = (name, bag) => {
+    setPlayerName(name)
+    setSelectedBag(bag)
+    saveCurrentPlayer(name, bag.id)
+  }
   const [totalScore, setTotalScore] = useState(0)
 
   return (
@@ -264,8 +274,7 @@ function App() {
             <ElegiTuBag
               content={elegiTuBagContent}
               bagOptions={bagOptions}
-              onSelectBag={setSelectedBag}
-              onSetName={setPlayerName}
+              onStartRun={startRun}
               onResetTotalScore={() => setTotalScore(0)}
             />
           }
