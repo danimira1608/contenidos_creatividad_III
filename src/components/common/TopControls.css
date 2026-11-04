@@ -1,8 +1,13 @@
-.fullscreen-button {
+.top-controls {
   position: fixed;
   top: 12px;
   right: 12px;
   z-index: 1000;
+  display: flex;
+  gap: 8px;
+}
+
+.top-control-button {
   padding: 7px 12px;
   border: 2px solid var(--color-rose);
   border-radius: 6px;
@@ -15,6 +20,6 @@
   opacity: 0.8;
 }
 
-.fullscreen-button:hover {
+.top-control-button:hover {
   opacity: 1;
 }

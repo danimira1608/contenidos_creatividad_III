@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { playSound } from '../../utils/sounds'
-import './FullscreenButton.css'
+import './TopControls.css'
 
 // Hides the browser's bars so the arcade cabinet can use the whole screen.
 function FullscreenButton() {
@@ -25,7 +25,7 @@ function FullscreenButton() {
   }
 
   return (
-    <button type="button" className="fullscreen-button" onClick={toggle}>
+    <button type="button" className="top-control-button" onClick={toggle}>
       {isFullscreen ? 'SALIR DE PANTALLA COMPLETA' : '⛶ PANTALLA COMPLETA'}
     </button>
   )

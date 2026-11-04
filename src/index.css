@@ -29,26 +29,6 @@ body {
   background: var(--color-ink);
 }
 
-.page-nav {
-  position: fixed;
-  top: 16px;
-  left: 16px;
-  z-index: 10;
-}
-
-.page-nav__link {
-  font-family: var(--font-arcade);
-  font-size: 14px;
-  color: var(--color-cream);
-  text-decoration: none;
-  opacity: 0.75;
-}
-
-.page-nav__link:hover {
-  opacity: 1;
-  text-decoration: underline;
-}
-
 @keyframes sparkle-twinkle {
   0%,
   100% {

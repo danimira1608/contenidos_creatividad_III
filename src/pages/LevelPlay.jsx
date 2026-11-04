@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Link, useNavigate, useSearchParams } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 import ArcadeFrame from '../components/layout/ArcadeFrame'
 import GameHud from '../components/coffee-run/GameHud'
 import EssentialsChecklist from '../components/coffee-run/EssentialsChecklist'
@@ -95,7 +95,7 @@ function formatTime(totalSeconds) {
   return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`
 }
 
-function LevelPlay({ content, selectedBag, playerName, totalScore, onLevelComplete, nextRoute, backTo, backLabel }) {
+function LevelPlay({ content, selectedBag, playerName, totalScore, onLevelComplete, nextRoute }) {
   const [bagPosition, setBagPosition] = useState(50)
   const [score, setScore] = useState(totalScore)
   const [remainingSeconds, setRemainingSeconds] = useState(content.timeLimitSeconds)
@@ -369,12 +369,6 @@ function LevelPlay({ content, selectedBag, playerName, totalScore, onLevelComple
 
   return (
     <>
-      <nav className="page-nav">
-        <Link className="page-nav__link" to={backTo}>
-          ← {backLabel}
-        </Link>
-      </nav>
-
       <ArcadeFrame decorated={false}>
         <img className="level-play__background" src={content.backgroundImage} alt="" />
         <div className="level-play__overlay" />

@@ -27,7 +27,31 @@ const SOUNDS = {
   },
 }
 
+const MUTED_KEY = 'rhode-mini-bag-muted'
+
 let audioContext = null
+let muted = loadMuted()
+
+function loadMuted() {
+  try {
+    return localStorage.getItem(MUTED_KEY) === 'true'
+  } catch {
+    return false
+  }
+}
+
+export function isSoundMuted() {
+  return muted
+}
+
+export function setSoundMuted(value) {
+  muted = value
+  try {
+    localStorage.setItem(MUTED_KEY, String(value))
+  } catch {
+    // localStorage unavailable (private mode, etc.) — the choice just won't persist
+  }
+}
 
 function getAudioContext() {
   if (audioContext) return audioContext
@@ -38,6 +62,7 @@ function getAudioContext() {
 }
 
 export function playSound(name) {
+  if (muted) return
   const sound = SOUNDS[name]
   const context = getAudioContext()
   if (!sound || !context) return

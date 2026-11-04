@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import ArcadeFrame from '../components/layout/ArcadeFrame'
 import BagPickerHeader from '../components/elegi-bag/BagPickerHeader'
 import BagCarousel from '../components/elegi-bag/BagCarousel'
@@ -74,12 +74,6 @@ function ElegiTuBag({ content, bagOptions, onSelectBag, onSetName, onResetTotalS
 
   return (
     <>
-      <nav className="page-nav">
-        <Link className="page-nav__link" to="/como-jugar">
-          ← Cómo Jugar
-        </Link>
-      </nav>
-
       <ArcadeFrame>
         <BagPickerHeader
           title={content.title}

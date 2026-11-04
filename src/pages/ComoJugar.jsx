@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import ArcadeFrame from '../components/layout/ArcadeFrame'
 import ComoJugarBanner from '../components/como-jugar/ComoJugarBanner'
 import HowItWorksSection from '../components/como-jugar/HowItWorksSection'
@@ -23,12 +23,6 @@ function ComoJugar({ content }) {
 
   return (
     <>
-      <nav className="page-nav">
-        <Link className="page-nav__link" to="/">
-          ← Home
-        </Link>
-      </nav>
-
       <ArcadeFrame>
         <ComoJugarBanner title={content.title} introLines={content.introLines} tagline={content.tagline} />
         <HowItWorksSection title={content.howItWorksTitle} items={content.howItWorksItems} />

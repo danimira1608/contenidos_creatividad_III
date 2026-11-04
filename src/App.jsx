@@ -6,8 +6,8 @@ import ElegiTuBag from './pages/ElegiTuBag'
 import LevelPlay from './pages/LevelPlay'
 import Ranking from './pages/Ranking'
 import Compartir from './pages/Compartir'
-import ScreenNavigator from './components/common/ScreenNavigator'
 import FullscreenButton from './components/common/FullscreenButton'
+import SoundToggle from './components/common/SoundToggle'
 import bagBlush from './assets/elegi-bag/bag-blush.png'
 import bagTaupe from './assets/elegi-bag/bag-taupe.png'
 import bagButter from './assets/elegi-bag/bag-butter.png'
@@ -281,8 +281,6 @@ function App() {
               totalScore={totalScore}
               onLevelComplete={setTotalScore}
               nextRoute="/beach-day"
-              backTo="/elegi-tu-bag"
-              backLabel="Elegí tu Mini Bag"
             />
           }
         />
@@ -297,8 +295,6 @@ function App() {
               totalScore={totalScore}
               onLevelComplete={setTotalScore}
               nextRoute="/night-out"
-              backTo="/coffee-run"
-              backLabel="Coffee Run"
             />
           }
         />
@@ -313,8 +309,6 @@ function App() {
               totalScore={totalScore}
               onLevelComplete={setTotalScore}
               nextRoute="/ranking"
-              backTo="/beach-day"
-              backLabel="Beach Day"
             />
           }
         />
@@ -343,8 +337,10 @@ function App() {
           }
         />
       </Routes>
-      <ScreenNavigator />
-      <FullscreenButton />
+      <div className="top-controls">
+        <SoundToggle />
+        <FullscreenButton />
+      </div>
     </BrowserRouter>
   )
 }
