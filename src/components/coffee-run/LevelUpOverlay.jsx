@@ -5,7 +5,7 @@ import sparkle from '../../assets/home/sparkle.png'
 import bagProductsIcon from '../../assets/coffee-run/next-level.png'
 import './LevelUpOverlay.css'
 
-function LevelUpOverlay({ nextLevelLabel, playerName, score, timeBonus, onContinue, progress, ctaLabel = 'SIGUIENTE NIVEL' }) {
+function LevelUpOverlay({ nextLevelLabel, playerName, score, timeBonus, onContinue, progress, ctaLabel = 'SIGUIENTE NIVEL', isFinal = false }) {
   return (
     <div className="level-up">
       <PopupCard className="level-up__card">
@@ -22,7 +22,7 @@ function LevelUpOverlay({ nextLevelLabel, playerName, score, timeBonus, onContin
             alt=""
             style={{ animationDuration: '2.2s' }}
           />
-          <p className="level-up__title">LEVEL UP!</p>
+          <p className="level-up__title">{isFinal ? '¡GANASTE!' : 'LEVEL UP!'}</p>
           <img
             className="level-up__sparkle decorative-sparkle"
             src={sparkle}
@@ -35,7 +35,7 @@ function LevelUpOverlay({ nextLevelLabel, playerName, score, timeBonus, onContin
 
         <p className="level-up__congrats">¡FELICITACIONES{playerName ? `, ${playerName}` : ''}!</p>
         <p className="level-up__desc">
-          Pasaste de nivel con
+          {isFinal ? 'Completaste los 3 niveles con' : 'Pasaste de nivel con'}
           <br />
           <span className="level-up__desc-highlight">{score}</span> puntos.
         </p>

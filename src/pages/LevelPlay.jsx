@@ -431,6 +431,7 @@ function LevelPlay({ content, selectedBag, playerName, totalScore, onLevelComple
             onContinue={goToNextLevel}
             progress={redirectProgress}
             ctaLabel={nextRoute === '/ranking' ? 'VER RANKING' : 'SIGUIENTE NIVEL'}
+            isFinal={nextRoute === '/ranking'}
           />
         )}
 

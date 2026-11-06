@@ -174,7 +174,7 @@ const beachDayContent = {
 const nightOutContent = {
   level: 'NIVEL 03',
   levelName: 'NIGHT OUT',
-  nextLevelLabel: 'NIVEL 04',
+  nextLevelLabel: 'JUEGO COMPLETO',
   maxLives: 3,
   timeLimitSeconds: 60,
   fallStep: 1.15,
